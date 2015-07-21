@@ -25,38 +25,61 @@ var Oxygen = {
 	AtomicNumber:"8"
 };
 var NUMBERS = {
-	"1":"Hydrogen",
-	"6":"Carbon",
-	"7":"Nitrogen",
-	"8":"Oxygen"
+	"1":Hydrogen,
+	"6":Carbon,
+	"7":Nitrogen,
+	"8":Oxygen
 };
 var SYMBOLS = {
-	"H":"Hydrogen",
-	"C":"Carbon",
-	"N":"Nitrogen",
-	"O":"Oxygen"
+	"H":Hydrogen,
+	"C":Carbon,
+	"N":Nitrogen,
+	"O":Oxygen
 };
-alert(Oxygen.Symbol);
+//alert(Oxygen.Symbol);
 
 
 function BySymbol(){
 	var getText = (getInput("AtomOrSym"));
 	var SymLook = SYMBOLS[getText];
-		setHTML("AtomOrSym" , SymLook.Symbol);
-		console.log(SymLook.Symbol);
-		if (getText !== SYMBOLS) {
+	if (SymLook == null) {
+			setHTML("ElemName" , "");
+			setHTML("ElemSym" ,"");
+			setHTML("AtomNum" , "");
 			alert("Hey, that's not a symbol!");
-		};
+		}
+		//clears Symbol, Name, and Number divs so that any letter that is 
+		//not defined alerts NaN
+		else {
+		setHTML("ElemName" , "Name: " + SymLook.Name);
+		setHTML("ElemSym" ,"Symbol: " + SymLook.Symbol);
+		setHTML("AtomNum" , "Atomic Number: " + SymLook.AtomicNumber);
+		//console.log(SymLook.Symbol);
+	}
+		
+		
 	
 		
 };
 function ByNumber(){
 	var getText = (getInput("AtomOrSym"));
 	var NumLook = NUMBERS[getText];
-		setHTML("AtomOrSym" , NumLook.AtomicNumber);
-		console.log(NumLook.AtomicNumber);
-		if (getText !== NUMBERS) {
+		if (NumLook == null) {
+			setHTML("ElemName" , "");
+			setHTML("ElemSym" ,"");
+			setHTML("AtomNum" , "");
 			alert("Hey, that's not a number!");
-		};
+		}
+		//clears Symbol, Name, and Number divs so that any letter that is 
+		//not defined alerts NaN
+		else {
+		setHTML("ElemName" , "Name: " + NumLook.Name);
+		setHTML("ElemSym" ,"Symbol: " + NumLook.Symbol);
+		setHTML("AtomNum" , "Atomic Number: " + NumLook.AtomicNumber);
+		//console.log(NumLook.AtomicNumber);
+
+	}
+		
+		
 	
 };
