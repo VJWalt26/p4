@@ -43,11 +43,20 @@ function BySymbol(){
 	var getText = (getInput("AtomOrSym"));
 	var SymLook = SYMBOLS[getText];
 		setHTML("AtomOrSym" , SymLook.Symbol);
-		console.log(SymLook.BySymbol);
+		console.log(SymLook.Symbol);
+		if (getText !== SYMBOLS) {
+			alert("Hey, that's not a symbol!");
+		};
+	
+		
 };
 function ByNumber(){
 	var getText = (getInput("AtomOrSym"));
 	var NumLook = NUMBERS[getText];
 		setHTML("AtomOrSym" , NumLook.AtomicNumber);
 		console.log(NumLook.AtomicNumber);
+		if (getText !== NUMBERS) {
+			alert("Hey, that's not a number!");
+		};
+	
 };
