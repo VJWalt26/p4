@@ -1,0 +1,28 @@
+#ChemElements {
+	font-size: 22px;
+	font-family: serif;
+}
+#number {
+	font-size:15px;
+	padding: 5px;
+	border: 1px solid;
+}
+#symbol {
+	font-size:15px;
+	padding:5px;
+	border: 1px solid;
+	color: black;
+
+}
+#ElemName {
+	font-size:22px;
+	font-family: serif;
+}
+#ElemSym {
+	font-size: 22px;
+	font-family: serif;
+}
+#AtomNum {
+	font-size: 22px;
+	font-family: serif;
+}
